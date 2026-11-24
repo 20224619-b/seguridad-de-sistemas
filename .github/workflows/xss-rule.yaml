@@ -1,0 +1,7 @@
+rules:
+  - id: angular-xss-bypass-security-trust
+    patterns:
+      - pattern: this.sanitizer.bypassSecurityTrustHtml(...)
+    message: "Posible XSS: se desactiva el sanitizador de Angular (bypassSecurityTrustHtml)."
+    languages: [typescript]
+    severity: ERROR
